@@ -318,6 +318,7 @@ https://github.com/Snehashree-Hub/EduTrace/blob/clean-main/frontend/public/image
 ![AI Study Assistant](frontend/public/images/ai-assistant.png)
 
 ### 🎓 EduBotAI
+![Uploading ai-robot.png.png…]()
 
 ![EduBotAI](frontend/public/images/ai-robot.png)
 
