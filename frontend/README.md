@@ -304,41 +304,29 @@ EduTrace/
 
 *This is a simplified overview. Refer to the repository for the complete source tree.*
 
----
-
 ## 📸 Screenshots
 
 ### 🏠 Home Dashboard
-
-https://github.com/Snehashree-Hub/EduTrace/blob/clean-main/frontend/public/images/dashboard.png
-
+![EduTrace Home Dashboard](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/dashboard.png)
 
 ### 🤖 AI Study Assistant
-
-![AI Study Assistant](frontend/public/images/ai-assistant.png)
+![EduTrace AI Study Assistant](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/ai-assistant.png)
 
 ### 🎓 EduBotAI
-![Uploading ai-robot.png.png…]()
-
-![EduBotAI](frontend/public/images/ai-robot.png)
+![EduTrace EduBotAI](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/ai-robot.png)
 
 ### 📚 Knowledge Base
-
-![Knowledge Base](frontend/public/images/knowledge.png)
-
-### 📊 Learning Analytics
-
-*Add an actual Analytics screenshot here when available.*
+![EduTrace Knowledge Base](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/knowledge.png)
 
 ### ✅ Tasks
-
-![Tasks](frontend/public/images/tasks.png)
+![EduTrace Tasks](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/tasks.png)
 
 ### 📖 Personalized Study Plan
+![EduTrace Personalized Study Plan](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/study-plan.png)
 
-![Study Plan](frontend/public/images/study-plan.png)
+### 📊 Learning Analytics
+*Analytics screenshot will be added when available.*
 
----
 
 ## 💻 Installation and Setup
 
