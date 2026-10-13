@@ -39,17 +39,23 @@ EduTrace aims to make learning more personalized by connecting performance analy
 - Quiz and practice workflows
 ## 📸 Screenshots
 
-### Dashboard
-![EduTrace Dashboard](docs/screenshots/dashboard.png)
+## 📸 Screenshots
 
-### AI Study Assistant
+### 🤖 AI Study Assistant
 ![AI Study Assistant](docs/screenshots/ai-assistant.png)
 
-### Learning Analytics
-![Learning Analytics](docs/screenshots/analytics.png)
+### 🎓 EduBotAI
+![EduBotAI](docs/screenshots/ai-robot.png)
 
-### Quiz Practice
-![Quiz Practice](docs/screenshots/quiz.png)
+### 📚 Knowledge Base
+![Knowledge Base](docs/screenshots/knowledge.png)
+
+### ✅ Tasks
+![Tasks](docs/screenshots/tasks.png)
+
+### 📖 Study Plan
+![Study Plan](docs/screenshots/study-plan.png)
+
 ## 🏗️ Project Structure
 
 ```text
