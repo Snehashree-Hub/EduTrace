@@ -310,7 +310,7 @@ EduTrace/
 
 ### 🏠 Home Dashboard
 
-![Uploading dashboard.png.png…]()
+https://github.com/Snehashree-Hub/EduTrace/blob/clean-main/frontend/public/images/dashboard.png
 
 
 ### 🤖 AI Study Assistant
