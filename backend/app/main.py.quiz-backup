@@ -1,0 +1,188 @@
+from dotenv import load_dotenv
+
+# =========================================================
+# LOAD ENVIRONMENT VARIABLES FIRST
+# =========================================================
+# This must happen before importing routers/services that
+# depend on environment variables such as GROQ_API_KEY.
+load_dotenv()
+
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+
+# =========================================================
+# API ROUTERS
+# =========================================================
+
+from backend.app.api.auth import router as auth_router
+from backend.app.api.edu_id import router as edu_id_router
+from backend.app.api.ai_assistant import router as ai_assistant_router
+from backend.app.api.planner import router as planner_router
+from backend.app.api.tasks import router as tasks_router
+from backend.app.api.calendar import router as calendar_router
+from backend.app.api.rag import router as rag_router
+from backend.app.api.notifications import router as notifications_router
+from backend.app.api.exams import router as exams_router
+from backend.app.api.assignments import router as assignments_router
+from backend.app.api.subjects import router as subjects_router
+from backend.app.api.performance import router as performance_router
+from backend.app.api.study_plan import router as study_plan_router
+from backend.app.api.games import router as games_router
+from backend.app.api.activity import router as activity_router
+from backend.app.api.progress import router as progress_router
+from backend.app.api.goals import router as goals_router
+from backend.app.api.admin import router as admin_router
+
+# NEW:
+# Live web retrieval for source-grounded quizzes
+from backend.app.api.web_quiz import router as web_quiz_router
+
+
+# =========================================================
+# APP
+# =========================================================
+
+app = FastAPI(
+    title="EduTrace",
+    description=(
+        "Personal AI Learning & Productivity Assistant "
+        "with adaptive learning, RAG, quizzes and web-grounded study support."
+    ),
+    version="1.0.0",
+)
+
+
+# =========================================================
+# CORS
+# =========================================================
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5174",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+# =========================================================
+# ROUTERS
+# =========================================================
+
+# Authentication
+app.include_router(auth_router)
+
+# EDU ID
+app.include_router(edu_id_router)
+
+# AI Assistant
+app.include_router(ai_assistant_router)
+
+# Planner
+app.include_router(planner_router)
+
+# Tasks
+app.include_router(tasks_router)
+
+# Calendar
+app.include_router(calendar_router)
+
+# RAG / Knowledge Vault
+app.include_router(rag_router)
+
+# Notifications
+app.include_router(notifications_router)
+
+# Exams
+app.include_router(exams_router)
+
+# Assignments
+app.include_router(assignments_router)
+
+# Subjects
+app.include_router(subjects_router)
+
+# Performance
+app.include_router(performance_router)
+
+# Study Plan
+app.include_router(study_plan_router)
+
+# Games
+app.include_router(games_router)
+
+# Activity
+app.include_router(activity_router)
+
+# Progress
+app.include_router(progress_router)
+
+# Goals
+app.include_router(goals_router)
+
+# Admin
+app.include_router(admin_router)
+
+# =========================================================
+# NEW - LIVE WEB QUIZ RETRIEVAL
+# =========================================================
+# Example:
+# POST /api/web-quiz/context
+# GET  /api/web-quiz/source/NEET
+
+app.include_router(web_quiz_router)
+
+
+# =========================================================
+# ROOT
+# =========================================================
+
+@app.get("/")
+def root():
+    return {
+        "name": "EduTrace",
+        "version": "1.0.0",
+        "status": "running",
+        "message": "EduTrace API is running successfully",
+    }
+
+
+# =========================================================
+# HEALTH CHECK
+# =========================================================
+
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy",
+        "service": "EduTrace API",
+        "version": "1.0.0",
+    }
+
+
+# =========================================================
+# API STATUS
+# =========================================================
+
+@app.get("/api/status")
+def api_status():
+    return {
+        "status": "online",
+        "name": "EduTrace",
+        "features": {
+            "ai_assistant": True,
+            "rag": True,
+            "adaptive_learning": True,
+            "quizzes": True,
+            "games": True,
+            "study_plan": True,
+            "live_web_quiz": True,
+        },
+    }

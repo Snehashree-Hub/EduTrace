@@ -1,0 +1,42 @@
+﻿EduTrace Test Study Material
+
+Machine Learning Basics
+
+Machine Learning is a branch of Artificial Intelligence that allows computers to learn patterns from data and make predictions or decisions without being explicitly programmed for every task.
+
+Supervised Learning:
+Supervised learning uses labelled training data. The model learns a relationship between input features and known output labels.
+
+Examples:
+1. Classification
+2. Regression
+
+Classification predicts a category.
+Example: Predict whether an email is spam or not spam.
+
+Regression predicts a continuous numerical value.
+Example: Predict the price of a house.
+
+Unsupervised Learning:
+Unsupervised learning works with data that does not have labelled outputs.
+
+Examples:
+1. Clustering
+2. Dimensionality reduction
+
+Clustering groups similar data points together.
+
+Common Machine Learning Steps:
+1. Collect data
+2. Clean data
+3. Split data into training and testing sets
+4. Train the model
+5. Evaluate the model
+6. Make predictions
+
+Overfitting happens when a model learns the training data too closely and performs poorly on unseen data.
+
+Underfitting happens when a model is too simple to learn the important patterns in the data.
+
+Important exam point:
+Classification predicts discrete categories, while regression predicts continuous numerical values.

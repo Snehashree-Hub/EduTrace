@@ -1,0 +1,626 @@
+﻿.et-interactive-activity {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 30, 42, 0.96),
+      rgba(16, 18, 25, 0.98)
+    );
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.et-interactive-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.et-interactive-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #ffffff;
+  background: rgba(99, 91, 255, 0.15);
+  border: 1px solid rgba(99, 91, 255, 0.22);
+}
+
+.et-interactive-kicker {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+
+  color: #a29cff;
+}
+
+.et-interactive-header h3 {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.25;
+
+  color: #ffffff;
+}
+
+.et-interactive-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.58);
+}
+
+/* =========================================================
+   PHYSICS
+   ========================================================= */
+
+.et-interactive-physics {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, 0.75fr);
+  gap: 16px;
+}
+
+.et-physics-scene {
+  position: relative;
+  min-height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      #20263c 0%,
+      #111827 66%,
+      #17191e 66%,
+      #111318 100%
+    );
+}
+
+.et-physics-sky {
+  position: absolute;
+  inset: 0 0 34% 0;
+}
+
+.et-physics-cloud {
+  position: absolute;
+
+  width: 80px;
+  height: 22px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.et-physics-cloud::before,
+.et-physics-cloud::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: inherit;
+}
+
+.et-physics-cloud::before {
+  width: 30px;
+  height: 30px;
+  left: 15px;
+  bottom: 5px;
+}
+
+.et-physics-cloud::after {
+  width: 38px;
+  height: 38px;
+  right: 14px;
+  bottom: 2px;
+}
+
+.cloud-one {
+  top: 46px;
+  left: 12%;
+}
+
+.cloud-two {
+  top: 94px;
+  right: 15%;
+  transform: scale(0.75);
+}
+
+.et-physics-ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 34%;
+
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.025) 0,
+      rgba(255, 255, 255, 0.025) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+}
+
+.et-cart {
+  position: absolute;
+
+  left: 18%;
+  bottom: 25%;
+
+  width: 92px;
+  height: 72px;
+
+  transition: transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.et-cart.moving {
+  transform: translateX(260px);
+}
+
+.et-cart-box {
+  width: 72px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px 9px 13px 13px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.16);
+
+  font-size: 31px;
+}
+
+.et-cart-wheel {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  background: #0a0b0f;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.wheel-one {
+  left: 14px;
+}
+
+.wheel-two {
+  left: 55px;
+}
+
+.et-force-arrow {
+  position: absolute;
+
+  left: 20%;
+  bottom: 51%;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+  background: rgba(99, 91, 255, 0.18);
+  border: 1px solid rgba(99, 91, 255, 0.25);
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.et-physics-controls {
+  padding: 16px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.et-control-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-bottom: 8px;
+}
+
+.et-control-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.et-control-row strong {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.et-control-row span {
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 11px;
+}
+
+.et-physics-controls input[type="range"] {
+  width: 100%;
+  margin: 3px 0 20px;
+  accent-color: #7c73ff;
+  cursor: pointer;
+}
+
+.et-push-button {
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 0;
+  border-radius: 11px;
+
+  color: #ffffff;
+  background: #635bff;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.et-push-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.et-result-mini {
+  margin-top: 13px;
+  padding: 11px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.et-result-mini span {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+}
+
+.et-result-mini strong {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+/* =========================================================
+   QUESTION
+   ========================================================= */
+
+.et-activity-question {
+  grid-column: 1 / -1;
+
+  padding: 17px;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.et-question-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  color: #a29cff;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.et-activity-question h4 {
+  margin: 0 0 14px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.et-question-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.et-answer-option {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.78);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.et-answer-option:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(99, 91, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.et-answer-option.selected {
+  background: rgba(99, 91, 255, 0.12);
+  border-color: rgba(99, 91, 255, 0.5);
+}
+
+.et-answer-option.correct {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.et-answer-option.wrong {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.et-answer-letter {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.et-answer-option > span:nth-child(2) {
+  flex: 1;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.et-hint {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+
+  margin-top: 12px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.et-hint svg {
+  min-width: 15px;
+  margin-top: 1px;
+  color: #a29cff;
+}
+
+.et-submit-answer {
+  margin-top: 14px;
+
+  min-height: 43px;
+  padding: 0 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #635bff;
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+}
+
+.et-submit-answer:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.et-success-message,
+.et-feedback-box {
+  position: relative;
+
+  margin-top: 14px;
+  padding: 13px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  border-radius: 11px;
+
+  font-size: 12px;
+}
+
+.et-success-message {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.et-success-message svg {
+  color: #6ee7a0;
+  min-width: 21px;
+}
+
+.et-success-message div,
+.et-feedback-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.et-success-message strong,
+.et-feedback-box strong {
+  color: #ffffff;
+}
+
+.et-success-message span,
+.et-feedback-box span {
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.5;
+}
+
+.et-feedback-box.success {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.et-feedback-box.try-again {
+  background: rgba(245, 158, 11, 0.07);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+}
+
+.et-reset-activity {
+  margin-left: auto;
+
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .et-interactive-physics {
+    grid-template-columns: 1fr;
+  }
+
+  .et-question-options {
+    grid-template-columns: 1fr;
+  }
+
+  .et-cart.moving {
+    transform: translateX(130px);
+  }
+}
+
+@media (max-width: 480px) {
+  .et-interactive-activity {
+    padding: 14px;
+  }
+
+  .et-physics-scene {
+    min-height: 250px;
+  }
+
+  .et-interactive-header h3 {
+    font-size: 17px;
+  }
+
+  .et-interactive-header p {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .et-cart {
+    transition: none;
+  }
+
+  .et-answer-option,
+  .et-push-button {
+    transition: none;
+  }
+}

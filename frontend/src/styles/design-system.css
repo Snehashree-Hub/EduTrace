@@ -1,0 +1,365 @@
+/* =========================================================
+   EDU TRACE GLOBAL DESIGN SYSTEM
+   ========================================================= */
+
+:root {
+  /* Background */
+  --et-bg: #0b0d12;
+  --et-bg-secondary: #0f1218;
+  --et-surface: #15181f;
+  --et-surface-hover: #1a1e27;
+  --et-surface-soft: rgba(255, 255, 255, 0.025);
+
+  /* Borders */
+  --et-border: rgba(255, 255, 255, 0.08);
+  --et-border-soft: rgba(255, 255, 255, 0.055);
+  --et-border-hover: rgba(139, 92, 246, 0.35);
+
+  /* Primary */
+  --et-primary: #635bff;
+  --et-primary-light: #8b7cff;
+  --et-primary-soft: rgba(99, 91, 255, 0.11);
+  --et-purple: #8b5cf6;
+
+  /* Text */
+  --et-text: #f4f6fb;
+  --et-text-secondary: #c4c9d4;
+  --et-text-muted: #8d94a5;
+  --et-text-subtle: #687080;
+
+  /* Status */
+  --et-success: #72d9a5;
+  --et-warning: #f2c66d;
+  --et-danger: #ef8f8f;
+  --et-info: #78b9ff;
+
+  /* Radius */
+  --et-radius-xs: 6px;
+  --et-radius-sm: 9px;
+  --et-radius-md: 12px;
+  --et-radius-lg: 16px;
+  --et-radius-xl: 20px;
+
+  /* Shadows */
+  --et-shadow-sm:
+    0 5px 18px rgba(0, 0, 0, 0.15);
+
+  --et-shadow-md:
+    0 10px 35px rgba(0, 0, 0, 0.22);
+
+  --et-shadow-lg:
+    0 20px 55px rgba(0, 0, 0, 0.32);
+
+  /* Layout */
+  --et-sidebar-width: 250px;
+  --et-sidebar-collapsed: 72px;
+  --et-topbar-height: 68px;
+
+  /* Animation */
+  --et-transition: 0.2s ease;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--et-bg);
+  color: var(--et-text);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #343844 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #30343f;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #414654;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(116, 105, 255, 0.35);
+  color: white;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+.et-button {
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: var(--et-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: var(--et-transition);
+}
+
+.et-button-primary {
+  color: white;
+  background:
+    linear-gradient(
+      135deg,
+      var(--et-primary),
+      var(--et-purple)
+    );
+  box-shadow:
+    0 8px 24px rgba(99, 91, 255, 0.2);
+}
+
+.et-button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 12px 30px rgba(99, 91, 255, 0.28);
+}
+
+.et-button-secondary {
+  color: var(--et-text-secondary);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--et-border);
+}
+
+.et-button-secondary:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.et-button-ghost {
+  color: var(--et-text-muted);
+  background: transparent;
+}
+
+.et-button-ghost:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.et-button-danger {
+  color: #ffaaaa;
+  background: rgba(239, 100, 100, 0.08);
+  border: 1px solid rgba(239, 100, 100, 0.15);
+}
+
+.et-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.et-card {
+  background: var(--et-surface);
+  border: 1px solid var(--et-border);
+  border-radius: var(--et-radius-lg);
+  box-shadow: var(--et-shadow-sm);
+}
+
+.et-card-hover {
+  transition:
+    transform var(--et-transition),
+    border-color var(--et-transition),
+    background var(--et-transition),
+    box-shadow var(--et-transition);
+}
+
+.et-card-hover:hover {
+  transform: translateY(-2px);
+  background: var(--et-surface-hover);
+  border-color: var(--et-border-hover);
+  box-shadow: var(--et-shadow-md);
+}
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.et-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 24px;
+  padding: 0 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.et-badge-primary {
+  color: #b4aaff;
+  background: var(--et-primary-soft);
+}
+
+.et-badge-success {
+  color: var(--et-success);
+  background: rgba(114, 217, 165, 0.08);
+}
+
+.et-badge-warning {
+  color: var(--et-warning);
+  background: rgba(242, 198, 109, 0.08);
+}
+
+.et-badge-danger {
+  color: var(--et-danger);
+  background: rgba(239, 143, 143, 0.08);
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.et-input,
+.et-select {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: var(--et-radius-sm);
+  outline: none;
+  color: var(--et-text);
+  background: #15181f;
+  border: 1px solid var(--et-border);
+  transition: var(--et-transition);
+}
+
+.et-input::placeholder {
+  color: var(--et-text-subtle);
+}
+
+.et-input:focus,
+.et-select:focus {
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow:
+    0 0 0 3px rgba(99, 91, 255, 0.08);
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.et-page-title {
+  margin: 0;
+  color: var(--et-text);
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -0.7px;
+}
+
+.et-page-description {
+  margin: 6px 0 0;
+  color: var(--et-text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.et-section-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 620;
+  color: var(--et-text);
+}
+
+.et-muted {
+  color: var(--et-text-muted);
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--et-primary-light);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes etFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes etPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.et-animate-in {
+  animation: etFadeIn 0.25s ease;
+}
