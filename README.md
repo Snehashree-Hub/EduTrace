@@ -39,22 +39,30 @@ EduTrace aims to make learning more personalized by connecting performance analy
 - Quiz and practice workflows
 ## 📸 Screenshots
 
+
 ## 📸 Screenshots
 
+### 🏠 Home Dashboard
+![EduTrace Home Dashboard](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/dashboard.png)
+
 ### 🤖 AI Study Assistant
-![AI Study Assistant](docs/screenshots/ai-assistant.png)
+![EduTrace AI Study Assistant](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/ai-assistant.png)
 
 ### 🎓 EduBotAI
-![EduBotAI](docs/screenshots/ai-robot.png)
+![EduTrace EduBotAI](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/ai-robot.png)
 
 ### 📚 Knowledge Base
-![Knowledge Base](docs/screenshots/knowledge.png)
+![EduTrace Knowledge Base](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/knowledge.png)
 
 ### ✅ Tasks
-![Tasks](docs/screenshots/tasks.png)
+![EduTrace Tasks](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/tasks.png)
 
-### 📖 Study Plan
-![Study Plan](docs/screenshots/study-plan.png)
+### 📖 Personalized Study Plan
+![EduTrace Study Plan](https://raw.githubusercontent.com/Snehashree-Hub/EduTrace/clean-main/frontend/public/images/study-plan.png)
+
+### 📊 Learning Analytics
+*Analytics screenshot will be added when available.*
+
 
 ## 🏗️ Project Structure
 
